@@ -15,7 +15,7 @@ from packing import packing,view
 file_num = list(range(1,5))
 dataA = None
 for f_num in file_num:
-    data_file = r'D:/硕士学习/研数模/B/子问题1-数据集A/dataA{}.csv'.format(f_num)
+    data_file = r'D:/githubWork/方形件组批优化/子问题1-数据集A/dataA{}.csv'.format(f_num)
     if dataA is None:
         dataA = pd.read_csv(data_file,header=0)
     else:
@@ -62,7 +62,7 @@ def bin_to_df(best_bins):
     return df_result
     # view(cur_result,bin_num)
 df_result = bin_to_df(best_bins)
-df_result.to_csv(r'D:/硕士学习/研数模/B/子问题1-数据集A/dataA_test.csv',encoding='utf-8-sig')
+df_result.to_csv(r'"D:/githubWork/方形件组批优化/子问题1-数据集A/dataA_test.csv',encoding='utf-8-sig')
 
 ### 编码
 '''
@@ -273,7 +273,7 @@ def main():
         else:
             df_result = pd.concat((df_result,cur_result),axis=0)
         # view(cur_result,bin_num)
-    df_result.to_csv(r'D:/硕士学习/研数模/B/子问题1-数据集A/dataA_GA.csv',encoding='utf-8-sig',index=None)
+    df_result.to_csv(r'D:/githubWork/方形件组批优化/子问题1-数据集A/dataA_GA.csv',encoding='utf-8-sig',index=None)
     ef = sum(dataA['item_length'] * dataA['item_width']) / (best_num * plate_area )
     print('最优利用率:',ef)
     return record_num,best_bins
@@ -282,38 +282,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-

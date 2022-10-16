@@ -248,7 +248,7 @@ def view(bin_result,bin_num=0):
     plt.xlim(0,1220)
     plt.ylim(0,2440)
     plt.title('原片{}'.format(bin_num))
-    plt.savefig('D:/硕士学习/研数模/B/子问题1图/原片{}.jpg'.format(bin_num))
+    plt.savefig('D:/githubWork/方形件组批优化/子问题1图/原片{}.jpg'.format(bin_num))
     plt.close()
     # plt.show()
 
@@ -284,7 +284,7 @@ def main():
     file_num = list(range(1,5))
     dataA = None
     for f_num in file_num:
-        data_file = r'D:/硕士学习/研数模/B/子问题1-数据集A/dataA{}.csv'.format(f_num)
+        data_file = r'D:/githubWork/方形件组批优化/子问题1-数据集A/dataA{}.csv'.format(f_num)
         if dataA is None:
             dataA = pd.read_csv(data_file,header=0)
         else:
@@ -313,7 +313,7 @@ def main():
     efs = []
     for f_num  in file_num:
         
-        data_file = r'D:/硕士学习/研数模/B/子问题1-数据集A/dataA{}.csv'.format(f_num)
+        data_file = r'D:/githubWork/方形件组批优化/子问题1-数据集A/dataA{}.csv'.format(f_num)
         dataA = pd.read_csv(data_file,header=0)
         # 按item_length 排序
         dataA.sort_values(by=['item_length','item_width'],axis=0,ascending=False,inplace=True)
@@ -338,9 +338,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-    
-    
-    
-    
 

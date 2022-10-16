@@ -12,7 +12,7 @@ from pack import packing,view
 file_num = list(range(1,6))
 dataB = None
 for f_num in file_num:
-    data_file = r'D:/硕士学习/研数模/B/子问题2-数据集B/dataB{}.csv'.format(f_num)
+    data_file = r'D:/githubWork/方形件组批优化/子问题2-数据集B/dataB{}.csv'.format(f_num)
     if dataB is None:
         dataB = pd.read_csv(data_file,header=0)
     else:
